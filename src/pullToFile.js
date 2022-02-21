@@ -1,7 +1,7 @@
 'use strict';
 
 const mongodb = require('mongodb');
-const ejson = require('mongodb-extended-json');
+const ejson = require('bson');
 const fs = require('fs');
 const ns = require('mongodb-ns');
 

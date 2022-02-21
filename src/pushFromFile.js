@@ -1,6 +1,6 @@
 'use strict';
 
-const ejson = require('mongodb-extended-json');
+const ejson = require('bson');
 const fs = require('fs');
 const jsonstream = require('json-stream');
 const mongodb = require('mongodb');

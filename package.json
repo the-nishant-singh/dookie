@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "JSONStream": "1.1.1",
+    "bson": "^4.6.1",
     "clone": "2.1.1",
     "co": "4.6.0",
     "commander": "2.8.1",
@@ -26,7 +27,6 @@
     "lodash.get": "4.4.2",
     "minimatch": "3.0.4",
     "mongodb": "~3.5",
-    "mongodb-extended-json": "1.7.0",
     "mongodb-ns": "1.0.3",
     "thunkify": "2.1.2"
   },
