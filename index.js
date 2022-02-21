@@ -3,7 +3,7 @@
 const clone = require('clone');
 const co = require('co');
 const dot = require('dot-component');
-const ejson = require('bson');
+const { EJSON } = require('bson');
 const fs = require('fs');
 const get = require('lodash.get');
 const mongodb = require('mongodb');
@@ -86,7 +86,7 @@ function push(uri, data, options) {
           dot.set(doc, key, tmp[key]);
         }
 
-        docs[i] = ejson.deserialize(doc);
+        docs[i] = EJSON.deserialize(doc);
       }
       promises.push(db.collection(collection).insert(docs));
     }
@@ -144,7 +144,7 @@ function pull(uri, options) {
     let res = {};
 
     filteredCollections.forEach(function(collection, i) {
-      res[collection] = contents[i].map(doc => ejson.serialize(doc));
+      res[collection] = contents[i].map(doc => EJSON.serialize(doc));
     });
 
     if (get(options, 'clearConnection', null)) {

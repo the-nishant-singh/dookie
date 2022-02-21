@@ -1,7 +1,7 @@
 'use strict';
 
 const mongodb = require('mongodb');
-const ejson = require('bson');
+const { EJSON } = require('bson');
 const fs = require('fs');
 const ns = require('mongodb-ns');
 
@@ -28,7 +28,7 @@ module.exports = async function pullToFile(uri, collections, path) {
     for (let doc = await cursor.next();
         doc != null;
         doc = await cursor.next()) {
-      stream.write('  ' + JSON.stringify(ejson.serialize(doc)) + '\n');
+      stream.write('  ' + JSON.stringify(EJSON.serialize(doc)) + '\n');
     }
   }
 }

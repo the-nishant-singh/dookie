@@ -1,6 +1,6 @@
 {
-  "name": "dookie",
-  "version": "0.4.1",
+  "name": "@nishantsingh/dookie",
+  "version": "0.0.2",
   "description": "Stylus-inspired preprocessor for MongoDB data sets and fixtures",
   "keywords": [
     "mongodb",
@@ -43,6 +43,6 @@
   "bin": "./bin/dookie.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vkarpov15/dookie.git"
+    "url": "git://github.com/the-nishant-singh/dookie.git"
   }
 }

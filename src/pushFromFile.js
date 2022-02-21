@@ -1,6 +1,6 @@
 'use strict';
 
-const ejson = require('bson');
+const { EJSON } = require('bson');
 const fs = require('fs');
 const jsonstream = require('json-stream');
 const mongodb = require('mongodb');
@@ -21,7 +21,7 @@ module.exports = async function pushFromFile(uri, filename) {
         return;
       }
 
-      db.collection(collection).insertOne(ejson.deserialize(obj)).
+      db.collection(collection).insertOne(EJSON.deserialize(obj)).
         catch(err => reject(err));
     });
 
