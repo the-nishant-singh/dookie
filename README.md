@@ -260,3 +260,8 @@ database in tests with ease.
     })
   
 ```
+
+
+## Nishant Singh Updates
+Forked this repo to fix a few bugs:
+- Resolved vulnerability
